@@ -4,7 +4,7 @@
     {
         public Smartphone(string name) : base(name)
         {
-
+            InstalledApps.Add(new Operation("Scroll", $"{this.Name} is scrolling based on user input...", false));
         }
 
         public void Connect()

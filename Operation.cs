@@ -8,7 +8,7 @@
 
         private readonly string operation;
 
-        public Operation(string name, bool requiresConnection, string operation)
+        public Operation(string name, string operation, bool requiresConnection)
         {
             Name = name;
             RequiresConnection = requiresConnection;
@@ -17,7 +17,13 @@
 
         public void Run(bool connected)
         {
-            throw new NotImplementedException();
+            if (RequiresConnection && !connected) // if requires connection and not connected
+            {
+                Console.WriteLine($"Operation '{this.Name}' requires connection but no connection is available");
+            }
+
+            Console.WriteLine(operation);
+            Console.WriteLine($"App '{this.Name}' run succesfully");
         }
     }
 }

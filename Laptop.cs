@@ -4,7 +4,7 @@
     {
         public Laptop(string name) : base(name)
         {
-
+            InstalledApps.Add(new Operation("Install Peripheral", $"Installing peripheral on {this.Name}...", false));
         }
 
         public void Connect()
