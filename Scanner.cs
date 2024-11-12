@@ -1,9 +1,10 @@
-﻿using cs_abstraction;
-
-namespace NcDeviceSystem
+﻿namespace NcDeviceSystem
 {
     internal class Scanner : Device
     {
+        public Scanner(string name) : base(name)
+        {
 
+        }
     }
 }
