@@ -15,7 +15,7 @@
             InstalledApps = new List<IRunnable>();
         }
 
-        public void InstallApp(App app)
+        public virtual void InstallApp(App app)
         {
             app.SetDevice(this);
             InstalledApps.Add(app);
