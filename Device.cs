@@ -24,9 +24,9 @@
 
         public void RunDevice()
         {
-            foreach (App app in InstalledApps)
+            foreach (IRunnable runnable in InstalledApps)
             {
-                app.Run(Connected);
+                runnable.Run(Connected);
             }
         }
     }

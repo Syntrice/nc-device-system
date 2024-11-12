@@ -20,10 +20,11 @@
             if (RequiresConnection && !connected) // if requires connection and not connected
             {
                 Console.WriteLine($"Operation '{this.Name}' requires connection but no connection is available");
+                return;
             }
 
             Console.WriteLine(operation);
-            Console.WriteLine($"App '{this.Name}' run succesfully");
+            Console.WriteLine($"Operation '{this.Name}' run succesfully");
         }
     }
 }

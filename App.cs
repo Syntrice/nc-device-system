@@ -30,6 +30,7 @@
             if (RequiresConnection && !connected) // if requires connection and not connected
             {
                 Console.WriteLine($"App '{this.Name}' requires connection but no connection is available");
+                return;
             }
 
             Functionality.ExecuteFunction(Function);
