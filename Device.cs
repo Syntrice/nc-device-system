@@ -14,5 +14,20 @@
             Connected = false;
             InstalledApps = new List<IRunnable>();
         }
+
+        public void InstallApp(App app)
+        {
+            app.SetDevice(this);
+            InstalledApps.Add(app);
+            Console.WriteLine($"Successfully installed app {app.Name}");
+        }
+
+        public void RunDevice()
+        {
+            foreach (App app in InstalledApps)
+            {
+                app.Run(Connected);
+            }
+        }
     }
 }
